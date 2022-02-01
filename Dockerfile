@@ -1,6 +1,6 @@
 FROM centos
 MAINTAINER ID <sarathibunni@gmail.com> 
-RUN yum update -y
+RUN /bin/sh -c yum update -y
 RUN yum install java -y
 RUN yum install git -y
 RUN mkdir /opt/mvn
