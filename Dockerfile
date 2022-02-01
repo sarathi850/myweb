@@ -1,7 +1,7 @@
 FROM centos
 MAINTAINER ID <sarathibunni@gmail.com> 
 RUN /bin/sh -c yum update -y
-RUN /bin/sh yum install java -y
+RUN /bin/sh yum install openjdk:8 -y
 RUN /bin/sh yum install git -y
 RUN mkdir /opt/mvn
 WORKDIR /opt/mvn
