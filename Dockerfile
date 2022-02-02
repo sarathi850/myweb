@@ -1,4 +1,5 @@
-FROM centos
+# Pull base image 
+From tomcat:8-jre8
 MAINTAINER ID <sarathibunni@gmail.com>
 RUN /bin/sh -c yum update -y
 RUN /bin/sh -c yum install -y \
@@ -8,5 +9,6 @@ RUN  /bin/sh -c yum install git -y
 RUN mkdir /opt/mvn
 WORKDIR /opt/mvn
 RUN /bin/sh -c  yum install maven -y
+COPY ./webapp.war /usr/local/tomcat/webapps
 
 
